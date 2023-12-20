@@ -92,29 +92,42 @@
                                 <h2 class="text-white mb-20 p-1">Add Pet Health</h2>
                                 <form action="/action_page.php">
 
+                                    <div class="container">
+                                        <div class="text-white mb-20 p-1"<p>Vaccination Status (ประวัติการฉีดวัคซีน)</p>
+                                        <form action="/action_page.php">
+                                          <div class="form-group">
+                                            <select class="form-control" id="sel1" name="sellist1">
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                            </select>
+                                            <br>
+                                        </form>
+                                      </div>
+
                                     <div class="form-group">
                                         <label for="text">Petname</label>
-                                        <h1 class="text-white mb-20 p-1">Add Pet Health</h1>
                                         <input type="text" class="form-control p-1" id="text"
                                             placeholder="Enter petname" name="petname" required="required"
                                             maxlength="100">
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="text-white mb-20 p-1">Species</label>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <form>
-                                                    <input type="radio" name="species" value="dog">dog
-                                                </form>
-                                                <br>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="radio" name="species" value="cat">cat
-                                </form>
-                            </div>
-                            </form>
-                        </div>
+                        <div class="form-group">
+                            <label class="text-white mb-20 p-1">Deworming/Parasite Control (ปรสิต/พยาธิ)</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form>
+                                        <input type="radio" name="parasite" value="yes">yes
+                                    </form>
+                                    <br>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="radio" name="parasite" value="no">no
+                    </form>
+                </div>
+                </form>
+            </div>
 
                         <div class="form-group">
                             <label for="text">Breed</label>
