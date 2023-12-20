@@ -106,13 +106,6 @@
                                         </form>
                                       </div>
 
-                                    <div class="form-group">
-                                        <label for="text">Petname</label>
-                                        <input type="text" class="form-control p-1" id="text"
-                                            placeholder="Enter petname" name="petname" required="required"
-                                            maxlength="100">
-                                    </div>
-
                         <div class="form-group">
                             <label class="text-white mb-20 p-1">Deworming/Parasite Control (ปรสิต/พยาธิ)</label>
                             <div class="row">
@@ -129,76 +122,53 @@
                 </form>
             </div>
 
+            <div class="form-group">
+                <label class="text-white mb-20 p-1">Sterilize (การทำหมัน)</label>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <input type="radio" name="sterilize" value="yes">yes
+                        </form>
+                        <br>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="radio" name="sterilize" value="no">no
+        </form>
+    </div>
+    </form>
+</div>
+
                         <div class="form-group">
-                            <label for="text">Breed</label>
-                            <input type="text" class="form-control p-1" id="text" placeholder="Enter breed" name="breed"
-                                required="required" maxlength="100">
+                            <label for="text">Medication/Treatment (ยาที่กำลังกิน)</label>
+                            <input type="text" class="form-control p-1" id="text" placeholder="Enter medication" name="madication"
+                             maxlength="500">
                         </div>
 
                         <div class="form-group">
-                            <label for="text">Age</label>
-                            <input type="text" class="form-control p-1" id="text" placeholder="Enter age" name="age"
-                                required="required" maxlength="100">
+                            <label for="text">Nutrition (ประเภทอาหารที่รับประทาน ex.อาหารเม็ด)</label>
+                            <input type="text" class="form-control p-1" id="text" placeholder="Enter nutrition" name="nutrition"
+                                required="required" maxlength="500">
                         </div>
 
-                        <div class="form-group">
-                            <label class="text-white mb-20 p-1">Gender</label>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <form>
-                                        <input type="radio" name="gender" value="male">dog
-                                    </form>
-                                    <br>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="radio" name="gender" value="female">cat
-                                    </form>
-                                </div>
-                                </form>
+                            <div class="form-group">
+                                <label for="text">Diet (ลดน้ำหนัก/คงที่/เพิ่มน้ำหนัก)</label>
+                                <input type="text" class="form-control p-1" id="text" placeholder="Enter diet"
+                                    name="diet" maxlength="100">
                             </div>
 
                             <div class="form-group">
-                                <label for="text">Weight</label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter weight"
-                                    name="weight" required="required" maxlength="100">
+                                <label for="text">Allegies (แพ้ยา/อาหาร)</label>
+                                <input type="text" class="form-control p-1" id="text" placeholder="Enter allegies"
+                                    name="allegies" maxlength="500">
                             </div>
 
                             <div class="form-group">
-                                <label for="text">Height</label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter height"
-                                    name="height" required="required" maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Color and Marking</label>
+                                <label for="text">Exercise (ระยะเวลาออกกำลังกายต่อสัปดาห์)</label>
                                 <input type="text" class="form-control p-1" id="text"
-                                    placeholder="Enter color and marking" name="colorandmarking" required="required"
+                                    placeholder="Enter exercise" name="exercise"
                                     maxlength="100">
                             </div>
-
-                            <div class="form-group">
-                                <label for="text">Personality (i.e. friendly/shy/playful) </label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter personality"
-                                    name="personality" maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Background (if relevant) </label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter background"
-                                    name="background" maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Preferences (i.e. fav toys/activities/food) </label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter preferences"
-                                    name="preferences" maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Habits</label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter habits"
-                                    name="habits" maxlength="100">
-                            </div>
+                            
                             <button type="submit" class="btn btn-danger">Add</button>
                             </form>
                         </div>
