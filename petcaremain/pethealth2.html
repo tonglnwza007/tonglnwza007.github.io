@@ -93,14 +93,11 @@
                                 <form action="/action_page.php">
 
                                     <div class="container">
-                                    <fieldset>
-                                        <legend>Single Text Field</legend>
-                                        <div class="field">
-                                          <label>Date</label>
-                                          <input type="text" pattern="[0-9]*" name="date" type="text" class="single-date-field">
-                                        </div>
-                                        <p><small>E.g. 26/04/1980</small></p>
-                                      </fieldset>
+                                        <form action="/action_page.php">
+                                            <label for="birthday">Birthday:</label>
+                                            <input type="date" id="birthday" name="birthday">
+                                            <input type="submit">
+                                          </form>
                                     </div>
 
                                     <div class="container">
