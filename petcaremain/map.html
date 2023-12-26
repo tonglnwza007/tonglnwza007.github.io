@@ -1,0 +1,4 @@
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d60437.263877435675!2d98.95897622900345!3d18.783486196697257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z4LiE4Lil4Li04LiZ4Li04LiB4Liq4Lix4LiV4Lin4LmM4LmA4Lil4Li14LmJ4Lii4LiHIOC5gOC4iuC4teC4ouC4h-C5g-C4q-C4oeC5iA!5e0!3m2!1sth!2sth!4v1703580988273!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d120869.14916104924!2d98.92513764016697!3d18.790980971055873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z4Lij4LmJ4Liy4LiZ4LiC4Liy4Lii4Liq4Li04LiZ4LiE4LmJ4Liy4Liq4Lix4LiV4Lin4LmM4LmA4Lil4Li14LmJ4Lii4LiHIOC5gOC4iuC4teC4ouC4h-C5g-C4q-C4oeC5iA!5e0!3m2!1sth!2sth!4v1703581567346!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
