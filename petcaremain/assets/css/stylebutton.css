@@ -1,0 +1,29 @@
+/* Example CSS styles for the "Change Profile Picture" section */
+.profile-form {
+    /* Add styles as needed */
+}
+
+.form-group-label {
+    margin-bottom: 10px;
+}
+
+#profilePicture {
+    display: none; /* Hide the default file input */
+}
+
+.custom-file-input {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #337ab7; /* Blue color, you can change this */
+    border: 1px solid #2e6da4; /* Darker shade of blue */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.custom-file-input:hover {
+    background-color: #286090; /* Darker shade on hover */
+}
