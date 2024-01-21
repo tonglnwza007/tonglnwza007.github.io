@@ -92,40 +92,95 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <form>
-                    <div class="form-group">
-                        <label for="profilePicture">Change Profile Picture</label>
-                        <input type="file" class="form-control-file" id="profilePicture" accept="image/*">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Your First Name">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Your Last Name">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="tel">Phone Number</label>
-                        <input type="tel" class="form-control" id="tel" placeholder="Your Phone Number">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" placeholder="Your Address">
-                    </div>
-                    <!-- ... (other profile form fields) ... -->
-                    <button type="submit" class="btn btn-danger">Save Changes</button>
-                </form>
+        <section class="container">
+            <label for="fileInput" class="d-block text-center mb-3">
+                <img id="profilePicture" src="profile-picture.jpg" alt="User Profile Picture" class="mx-auto d-block">
+                Change Profile Picture
+                <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="updateProfilePicture(this)">
+            </label>
+    
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" value="John">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" value="Doe">
+                </div>
             </div>
-        </div>
+    
+            <div class="form-group">
+                <label for="tel">Telephone</label>
+                <input type="tel" class="form-control" id="tel" value="123-456-7890">
+            </div>
+    
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" id="address" value="123 Main St, City">
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" value="john.doe@example.com">
+            </div>
+    
+            <button class="btn btn-danger" onclick="saveProfile()">Save Profile</button>
+        </section>
+    
+        <!-- Bootstrap JS and Popper.js (required for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+        <script>
+            function updateProfilePicture(input) {
+                var profilePicture = document.getElementById('profilePicture');
+                var file = input.files[0];
+        
+                if (file) {
+                    var reader = new FileReader();
+        
+                    reader.onload = function (e) {
+                        var img = new Image();
+                        img.src = e.target.result;
+        
+                        // Set a maximum width and height for the displayed image
+                        var maxWidth = 300; // Adjust this value as needed
+                        var maxHeight = 300; // Adjust this value as needed
+        
+                        img.onload = function () {
+                            var width = img.width;
+                            var height = img.height;
+        
+                            // Calculate new dimensions while maintaining aspect ratio
+                            if (width > height) {
+                                if (width > maxWidth) {
+                                    height *= maxWidth / width;
+                                    width = maxWidth;
+                                }
+                            } else {
+                                if (height > maxHeight) {
+                                    width *= maxHeight / height;
+                                    height = maxHeight;
+                                }
+                            }
+        
+                            profilePicture.src = e.target.result;
+                            profilePicture.style.width = width + 'px';
+                            profilePicture.style.height = height + 'px';
+                        };
+                    };
+        
+                    reader.readAsDataURL(file);
+                }
+            }
+        
+            function saveProfile() {
+                // Your existing saveProfile function
+            }
+        </script>
+    </body>    
     </div>
 </section>
 </main>
