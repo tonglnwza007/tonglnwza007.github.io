@@ -22,6 +22,16 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* เพิ่มสไตล์ในส่วนนี้ */
+        #profilePicture {
+            border-radius: 50%;
+            max-width: 150px; /* ปรับขนาดรูปภาพตามต้องการ */
+            max-height: 150px; /* ปรับขนาดรูปภาพตามต้องการ */
+            width: auto;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -87,14 +97,14 @@
         <div class="row justify-content-sm-center">
             <div class="col-xl-7 col-lg-8 col-md-10">
                 <!-- Section Tittle -->
-                <div class="section-tittle text-center mb-70">
+                <div class="section-tittle text-center mb-20">
                     <h2><b>Edit Your Profile</b></h2>
                 </div>
             </div>
         </div>
         <section class="container">
             <label for="fileInput" class="d-block text-center mb-3">
-                <img id="profilePicture" src="profile-picture.jpg" alt="User Profile Picture" class="mx-auto d-block">
+                <img id="profilePicture" src="profile-picture.jpg" alt="User Profile Picture" class="mx-auto d-block mb-3">
                 Change Profile Picture
                 <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="updateProfilePicture(this)">
             </label>
@@ -112,12 +122,12 @@
     
             <div class="form-group">
                 <label for="tel">Telephone</label>
-                <input type="tel" class="form-control" id="tel" value="123-456-7890">
+                <input type="tel" class="form-control" id="tel" value="061-234-5678">
             </div>
     
             <div class="form-group">
                 <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" value="123 Main St, City">
+                <input type="text" class="form-control" id="address" value="123/4 Main St, City">
             </div>
     
             <div class="form-group">
@@ -127,14 +137,16 @@
     
             <button class="btn btn-danger" onclick="saveProfile()">Save Profile</button>
         </section>
+    <script>
+    // เพิ่มโค้ดนี้เพื่อโหลดรูปเริ่มต้นเมื่อหน้าเว็บถูกโหลด
+    document.addEventListener('DOMContentLoaded', function () {
+    var defaultProfilePictureUrl = 'assets/img/logo/petcarelogo.jpg';
     
-        <!-- Bootstrap JS and Popper.js (required for Bootstrap's JavaScript plugins) -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-        <script>
-            function updateProfilePicture(input) {
+    var profilePicture = document.getElementById('profilePicture');
+    profilePicture.src = defaultProfilePictureUrl;
+    });
+
+    function updateProfilePicture(input) {
                 var profilePicture = document.getElementById('profilePicture');
                 var file = input.files[0];
         
@@ -179,10 +191,8 @@
             function saveProfile() {
                 // Your existing saveProfile function
             }
-        </script>
-    </body>    
-    </div>
-</section>
+    </script>
+
 </main>
 <footer>
     <!-- Footer Start-->
