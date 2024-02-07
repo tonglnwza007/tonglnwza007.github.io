@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/profile.css">
+    
     <style>
         /* เพิ่มสไตล์ในส่วนนี้ */
         #profilePicture {
@@ -32,7 +33,27 @@
             width: auto;
             height: auto;
         }
+
+        #profileFormContainer {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        #profileFormContainer img {
+            border-radius: 50%;
+            max-width: 100%;
+            max-height: 150px;
+            width: auto;
+            height: auto;
+            margin-bottom: 20px;
+        }
     </style>
+
 </head>
 
 <body>
@@ -47,7 +68,7 @@
             </div>
         </div>
     </div>
-    <!-- Preloader Start -->
+    <!-- Preloader End -->
     <header>
         <!-- Header Start -->
         <div class="header-area header-transparent">
@@ -90,54 +111,55 @@
         </div>
         <!-- Header End -->
     </header>
-    <main>
+    
+<main>
 
-<!-- Profile Form -->
-<section class="profile-form section-padding30">
-    <div class="container">
-        <div class="row justify-content-sm-center">
-            <div class="col-xl-7 col-lg-8 col-md-10">
-                <!-- Section Tittle -->
-                <div class="section-tittle text-center mb-20">
-                    <h2><b>Edit Your Profile</b></h2>
+    <!-- Profile Form -->
+    <section class="profile-form section-padding30">
+        <div class="container">
+            <div class="row justify-content-sm-center">
+                <div class="col-xl-7 col-lg-8 col-md-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-20">
+                        <h2><b>Edit Your Profile</b></h2>
+                    </div>
                 </div>
             </div>
-        </div>
-        <section class="container">
-            <label for="fileInput" class="d-block text-center mb-3">
-                <img id="profilePicture" src="profile-picture.jpg" alt="User Profile Picture" class="mx-auto d-block mb-3">
-                Change Profile Picture
-                <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="updateProfilePicture(this)">
-            </label>
-    
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" value="John">
+            <section class="container">
+                <label for="fileInput" class="d-block text-center mb-3">
+                    <img id="profilePicture" src="profile-picture.jpg" alt="User Profile Picture" class="mx-auto d-block mb-3">
+                    Change Profile Picture
+                    <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="updateProfilePicture(this)">
+                </label>
+        
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" value="John">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" value="Doe">
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" value="Doe">
+        
+                <div class="form-group">
+                    <label for="tel">Telephone</label>
+                    <input type="tel" class="form-control" id="tel" value="012-345-6789">
                 </div>
-            </div>
-    
-            <div class="form-group">
-                <label for="tel">Telephone</label>
-                <input type="tel" class="form-control" id="tel" value="012-345-6789">
-            </div>
-    
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" value="123/4 Main St, City">
-            </div>
-    
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" value="john.doe@example.com">
-            </div>
-    
-            <button class="btn btn-danger" onclick="saveProfile()">Save Profile</button>
-        </section>
+        
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" value="123/4 Main St, City">
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" value="john.doe@example.com">
+                </div>
+        
+                <button class="btn btn-danger" onclick="saveProfile()">Save Profile</button>
+    </section>
     <script>
     // เพิ่มโค้ดนี้เพื่อโหลดรูปเริ่มต้นเมื่อหน้าเว็บถูกโหลด
     document.addEventListener('DOMContentLoaded', function () {

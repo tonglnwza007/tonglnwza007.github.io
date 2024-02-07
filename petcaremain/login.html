@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="621750453719-9b1bc14g85bcq9m8900po0vf8b6mrorg.apps.googleusercontent.com"
 </head>
 
 <body>
@@ -109,6 +112,7 @@
                                             placeholder="Enter password" name="pswd" required="required" maxlength="30">
                                     </div>
                                     <button type="submit" class="btn btn-danger">Login</button>
+                                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
                                 </form>
                             </div>
                         </div>
@@ -169,6 +173,17 @@
         </div>
         <!-- Footer End-->
     </footer>
+
+
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId());
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email:' + profile.getEmail());
+    }
+
+
     <!-- Scroll Up -->
     <div id="back-top">
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
