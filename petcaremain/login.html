@@ -24,7 +24,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="621750453719-9b1bc14g85bcq9m8900po0vf8b6mrorg.apps.googleusercontent.com"
+
+    <meta name="google-signin-client_id" content="621750453719-9b1bc14g85bcq9m8900po0vf8b6mrorg.apps.googleusercontent.com">
+
+
 </head>
 
 <body>
@@ -113,6 +116,11 @@
                                     </div>
                                     <button type="submit" class="btn btn-danger">Login</button>
                                     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+
+                                    <div id="google-signin-button"></div>
+
+
                                 </form>
                             </div>
                         </div>
@@ -224,6 +232,36 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+
+
+    <script>
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          var user_name = profile.getName();
+          alert(user_name);
+        }
+    
+        function onLoad() {
+          gapi.load('auth2,signin2', function() {
+            var auth2 = gapi.auth2.init();
+            auth2.then(function() {
+              // Current values
+              var isSignedIn = auth2.isSignedIn.get();
+              var currentUser = auth2.currentUser.get();
+    
+              if (!isSignedIn) {
+                // Rendering g-signin2 button.
+                gapi.signin2.render('google-signin-button', {
+                  'onsuccess': 'onSignIn'  
+                });
+              }
+            });
+          });
+        }
+      </script>
+
+    
+    
 
 </body>
 
