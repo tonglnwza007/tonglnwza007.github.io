@@ -116,10 +116,7 @@
                                     </div>
                                     <button type="submit" class="btn btn-danger">Login</button>
                                     
-                                    <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-
-
-                                    <div id="google-signin-button"></div>
+                                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
 
                                 </form>
@@ -184,20 +181,21 @@
     </footer>
 
 
-    <!-- 
+
     <script>
-        function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId());
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email:' + profile.getEmail());
-        }
+
+function onSignIn(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      //console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+      //console.log('Image URL: ' + profile.getImageUrl());
+      //console.log('Name: ' + profile.getName());
+      //console.log('Email: ' + profile.getEmail());
+      var user_uname = profile.getName();
+      var user_email = profile.getEmail();
+      alert(user_uname);
+    }
+
     </script>
-
-    -->
-
-
 
 
     <!-- Scroll Up -->
@@ -238,35 +236,6 @@
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
 
-
-    <script>
-        function onSignIn(googleUser) {
-          var profile = googleUser.getBasicProfile();
-          var user_name = profile.getName();
-          alert(user_name);
-        }
-    
-        function onLoad() {
-          gapi.load('auth2,signin2', function() {
-            var auth2 = gapi.auth2.init();
-            auth2.then(function() {
-              // Current values
-              var isSignedIn = auth2.isSignedIn.get();
-              var currentUser = auth2.currentUser.get();
-    
-              if (!isSignedIn) {
-                // Rendering g-signin2 button.
-                gapi.signin2.render('google-signin-button', {
-                  'onsuccess': 'onSignIn'  
-                });
-              }
-            });
-          });
-        }
-      </script>
-
-    
-    
 
 </body>
 
