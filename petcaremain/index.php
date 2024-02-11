@@ -56,7 +56,7 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">
+                                            <li><a href="index.php">
                                                     <h5>Home</h5>
                                                 </a></li>
                                             <li><a href="about.html">
@@ -69,10 +69,10 @@
                                     </nav>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="register.html" class="header-btn h5 text-white">Register</a>
+                                    <a href="register.php" class="header-btn h5 text-white">Register</a>
                                 </div>
                                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="login.html" class="header-btn h5 text-white">Login</a>
+                                    <a href="login.php" class="header-btn h5 text-white">Login</a>
                                 </div>
                             </div>
                         </div>

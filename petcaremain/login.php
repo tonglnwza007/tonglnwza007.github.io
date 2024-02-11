@@ -2,6 +2,7 @@
 <html class="no-js" lang="zxx">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>PetCare</title>
@@ -22,11 +23,6 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-    <meta name="google-signin-client_id" content="621750453719-9b1bc14g85bcq9m8900po0vf8b6mrorg.apps.googleusercontent.com">
-
 
 </head>
 
@@ -115,11 +111,6 @@
                                             placeholder="Enter password" name="pswd" required="required" maxlength="30">
                                     </div>
                                     <button type="submit" class="btn btn-danger">Login</button>
-                                    
-                                    <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-
-
-                                    <div id="google-signin-button"></div>
 
 
                                 </form>
@@ -134,71 +125,54 @@
     </main>
     <footer>
         <!-- Footer Start-->
-        <div class="footer-area footer-padding">
-            <div class="container">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="single-footer-caption mb-30">
-                                <!-- logo -->
-                                <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                                </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p>Until one has loved an animal a part of one's soul remains unawakened</p>
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <!-- logo -->
+                                    <div class="footer-logo mb-25">
+                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    </div>
+                                    <div class="footer-tittle">
+                                        <div class="footer-pera">
+                                            <p>Until one has loved an animal a part of one's soul remains unawakened</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Menu</h4>
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                </ul>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Menu</h4>
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Services</h4>
-                                <ul>
-                                    <li><a href="petprofile.html">Pet Profile</a></li>
-                                    <li><a href="pethealth.html">Pet Health</a></li>
-                                    <li><a href="pettag.html">Pet Tag</a></li>
-                                    <li><a href="shopandclinic.html">Shop and Clinic</a></li>
-                                </ul>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Services</h4>
+                                    <ul>
+                                        <li><a href="petprofile.html">Pet Profile</a></li>
+                                        <li><a href="pethealth.html">Pet Health</a></li>
+                                        <li><a href="pettag.html">Pet Tag</a></li>
+                                        <li><a href="shopandclinic.html">Shop and Clinic</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         <!-- Footer End-->
     </footer>
-
-
-    <!-- 
-    <script>
-        function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId());
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email:' + profile.getEmail());
-        }
-    </script>
-
-    -->
-
-
-
 
     <!-- Scroll Up -->
     <div id="back-top">
@@ -238,35 +212,6 @@
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
 
-
-    <script>
-        function onSignIn(googleUser) {
-          var profile = googleUser.getBasicProfile();
-          var user_name = profile.getName();
-          alert(user_name);
-        }
-    
-        function onLoad() {
-          gapi.load('auth2,signin2', function() {
-            var auth2 = gapi.auth2.init();
-            auth2.then(function() {
-              // Current values
-              var isSignedIn = auth2.isSignedIn.get();
-              var currentUser = auth2.currentUser.get();
-    
-              if (!isSignedIn) {
-                // Rendering g-signin2 button.
-                gapi.signin2.render('google-signin-button', {
-                  'onsuccess': 'onSignIn'  
-                });
-              }
-            });
-          });
-        }
-      </script>
-
-    
-    
 
 </body>
 
