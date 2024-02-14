@@ -160,61 +160,6 @@
         
                 <button class="btn btn-danger" onclick="saveProfile()">Save Profile</button>
     </section>
-    <script>
-    // เพิ่มโค้ดนี้เพื่อโหลดรูปเริ่มต้นเมื่อหน้าเว็บถูกโหลด
-    document.addEventListener('DOMContentLoaded', function () {
-    var defaultProfilePictureUrl = 'assets/img/logo/petcarelogo.jpg';
-    
-    var profilePicture = document.getElementById('profilePicture');
-    profilePicture.src = defaultProfilePictureUrl;
-    });
-
-    function updateProfilePicture(input) {
-                var profilePicture = document.getElementById('profilePicture');
-                var file = input.files[0];
-        
-                if (file) {
-                    var reader = new FileReader();
-        
-                    reader.onload = function (e) {
-                        var img = new Image();
-                        img.src = e.target.result;
-        
-                        // Set a maximum width and height for the displayed image
-                        var maxWidth = 300; // Adjust this value as needed
-                        var maxHeight = 300; // Adjust this value as needed
-        
-                        img.onload = function () {
-                            var width = img.width;
-                            var height = img.height;
-        
-                            // Calculate new dimensions while maintaining aspect ratio
-                            if (width > height) {
-                                if (width > maxWidth) {
-                                    height *= maxWidth / width;
-                                    width = maxWidth;
-                                }
-                            } else {
-                                if (height > maxHeight) {
-                                    width *= maxHeight / height;
-                                    height = maxHeight;
-                                }
-                            }
-        
-                            profilePicture.src = e.target.result;
-                            profilePicture.style.width = width + 'px';
-                            profilePicture.style.height = height + 'px';
-                        };
-                    };
-        
-                    reader.readAsDataURL(file);
-                }
-            }
-        
-            function saveProfile() {
-                // Your existing saveProfile function
-            }
-    </script>
 
 </main>
 <footer>
