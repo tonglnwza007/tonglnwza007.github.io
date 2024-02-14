@@ -49,9 +49,9 @@
             var userEntity = {};
             userEntity = JSON.parse(sessionStorage.getItem('myUserEntity'));
 
-            document.getElementsById('firstName')[0].value = userEntity.firstName;
-            document.getElementsById('lastName')[0].value = userEntity.lastName;
-            document.getElementsById('email')[0].value = userEntity.email;
+            document.getElementsById('firstName').value = userEntity.firstName;
+            document.getElementsById('lastName').value = userEntity.lastName;
+            document.getElementsById('email').value = userEntity.email;
 
             }
         }
