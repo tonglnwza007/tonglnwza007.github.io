@@ -49,11 +49,10 @@
             var userEntity = {};
             userEntity = JSON.parse(sessionStorage.getItem('myUserEntity'));
 
-            document.getElementsByName('firstName')[0].value = userEntity.FirstName;
-            document.getElementsByName('lastName')[0].value = userEntity.LastName;
-            document.getElementsByName('email')[0].value = userEntity.Email;
+            document.getElementsById('firstName')[0].value = userEntity.firstName;
+            document.getElementsById('lastName')[0].value = userEntity.lastName;
+            document.getElementsById('email')[0].value = userEntity.email;
 
-            alert(userEntity.email);
             }
         }
 
