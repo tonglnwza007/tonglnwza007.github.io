@@ -34,14 +34,9 @@
     <script>
 
         window.onload = function () {
-        google.accounts.id.initialize({
-            client_id:"621750453719-9b1bc14g85bcq9m8900po0vf8b6mrorg.apps.googleusercontent.com",
-            callback: handleCredentialResponse
-        });
-        //google.accounts.id.prompt();
 
         checkIfLoggedIn();
-
+        
         }
 
         function checkIfLoggedIn() {
