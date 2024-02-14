@@ -58,6 +58,38 @@
 
 <body>
     <!-- Preloader Start -->
+
+    <script>
+
+        window.onload = function () {
+        google.accounts.id.initialize({
+            client_id:"621750453719-9b1bc14g85bcq9m8900po0vf8b6mrorg.apps.googleusercontent.com",
+            callback: handleCredentialResponse
+        });
+        //google.accounts.id.prompt();
+
+        checkIfLoggedIn();
+
+        }
+
+        function checkIfLoggedIn() {
+        if (sessionStorage.getItem('myUserEntity') == null) {
+            //Redirect to login page, no user entity available in sessionStorage
+            window.location.href = 'login.html';
+
+        } else {
+            //User already logged in
+            var userEntity = {};
+            userEntity = JSON.parse(sessionStorage.getItem('myUserEntity'));
+
+            document.getElementsByName('firstName')[0].value = userEntity.FirstName;
+            document.getElementsByName('lastName')[0].value = userEntity.LastName;
+            document.getElementsByEmail('Email')[0].value = userEntity.Email;
+            }
+        }
+
+    </script>
+    
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
@@ -127,9 +159,7 @@
             </div>
             <section class="container">
                 <label for="fileInput" class="d-block text-center mb-3">
-                    <img id="profilePicture" src="profile-picture.jpg" alt="User Profile Picture" class="mx-auto d-block mb-3">
-                    Change Profile Picture
-                    <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="updateProfilePicture(this)">
+                    <img id="profilePicture" src="profile-picture.jpg" alt="" class="mx-auto d-block mb-3">
                 </label>
         
                 <div class="form-row">

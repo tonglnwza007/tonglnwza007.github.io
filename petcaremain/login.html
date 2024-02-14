@@ -102,23 +102,25 @@
                                         <img src="assets/img/logo/petcarelogo.jpg" class="rounded-circle p-2 mb-10"
                                             alt="Cinque Terre" width="120" height="120">
                                     </div>
-                                    <div id="g_id_onload"
-                                    data-client_id="621750453719-9b1bc14g85bcq9m8900po0vf8b6mrorg.apps.googleusercontent.com"
-                                    data-context="signin"
-                                    data-ux_mode="popup"
-                                    data-callback="onSignIn"
-                                    data-auto_prompt="false">
+                                    <div class="center">
+                                        <div id="g_id_onload"
+                                        data-client_id="621750453719-9b1bc14g85bcq9m8900po0vf8b6mrorg.apps.googleusercontent.com"
+                                        data-context="signin"
+                                        data-ux_mode="popup"
+                                        data-callback="onSignIn"
+                                        data-auto_prompt="false">
+                                        </div>
+                                
+                                        <div class="g_id_signin"
+                                        data-type="standard"
+                                        data-shape="rectangular"
+                                        data-theme="outline"
+                                        data-text="signin_with"
+                                        data-size="large"
+                                        data-logo_alignment="left">
+                                        </div>
                                     </div>
-                             
-                                    <div class="g_id_signin"
-                                    data-type="standard"
-                                    data-shape="rectangular"
-                                    data-theme="outline"
-                                    data-text="signin_with"
-                                    data-size="large"
-                                    data-logo_alignment="left">
-                                    </div>
-
+                                    
 
                                 </form>
                             </div>
@@ -220,7 +222,7 @@
     <script src="./assets/js/main.js"></script>
 
     <script>
-        
+
         function decodeJwtResponse(token) {
         var base64Url = token.split('.')[1];
         var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -237,7 +239,12 @@
 
       var myUserEntity = {};
       myUserEntity.Id = responsePayload.sub;
-      myUserEntity.Name = responsePayload.name;
+
+      const fullname = responsePayload.name.split(" ");
+
+      myUserEntity.firstname = fullname[0];
+      myUserEntity.lastname = fullname[1];
+      
       myUserEntity.Email = responsePayload.email;
 
       sessionStorage.setItem('myUserEntity', JSON.stringify(myUserEntity));
