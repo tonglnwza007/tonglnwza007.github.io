@@ -51,7 +51,7 @@
 
             document.getElementsByName('firstName')[0].value = userEntity.FirstName;
             document.getElementsByName('lastName')[0].value = userEntity.LastName;
-            document.getElementsByEmail('email')[0].value = userEntity.Email;
+            document.getElementsByName('email')[0].value = userEntity.Email;
 
             alert(userEntity.email);
             }
@@ -127,10 +127,6 @@
                 </div>
             </div>
             <section class="container">
-                <label for="fileInput" class="d-block text-center mb-3">
-                    <img id="profilePicture" src="profile-picture.jpg" alt="" class="mx-auto d-block mb-3">
-                </label>
-        
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="firstName">First Name</label>
@@ -158,6 +154,7 @@
                 </div>
         
                 <button class="btn btn-danger" onclick="saveProfile()">Save Profile</button>
+            </section>
     </section>
 
 </main>
