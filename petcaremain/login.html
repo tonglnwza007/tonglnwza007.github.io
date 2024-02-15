@@ -245,17 +245,11 @@
       myUserEntity.firstname = fullname[0];
       myUserEntity.lastname = fullname[1];
       
-      myUserEntity.Email = responsePayload.email;
+      myUserEntity.email = responsePayload.email;
 
       sessionStorage.setItem('myUserEntity', JSON.stringify(myUserEntity));
 
-      console.log(myUserEntity.Id);
-      console.log(responsePayload.name);
-      console.log(myUserEntity.firstname);
-      console.log(myUserEntity.lastname);
-
-
-      //window.location = "profile.html";
+      window.location = "profile.html";
     }
 
     </script>
