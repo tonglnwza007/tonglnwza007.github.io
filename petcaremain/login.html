@@ -249,7 +249,13 @@
 
       sessionStorage.setItem('myUserEntity', JSON.stringify(myUserEntity));
 
-      window.location = "profile.html";
+      console.log(myUserEntity.Id);
+      console.log(responsePayload.name);
+      console.log(myUserEntity.firstname);
+      console.log(myUserEntity.lastname);
+
+
+      //window.location = "profile.html";
     }
 
     </script>
