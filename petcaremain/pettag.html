@@ -83,36 +83,38 @@
     <main>
         <div class="container">
             <div class="text-center">
-                <h5 class="text-white">Enter your pet name</h5>
-                <input type="text" placeholder="name of your dog" id="qrText">
+                <h5 class="text-white">Enter your pet's name</h5>
+                <input type="text" placeholder="Name of your pet" id="petName" class="form-control">
                 <h5 class="text-white">Enter your name</h5>
-                <input type="text" placeholder="your name" id="qrText">
+                <input type="text" placeholder="Your name" id="yourName" class="form-control">
                 <h5 class="text-white">Enter your contact number</h5>
-                <input type="" placeholder="contact number" id="qrText">
-
+                <input type="text" placeholder="Contact number" id="contactNumber" class="form-control" maxlength="10">
+    
                 <div id="imgBox">
-                    <img src="" id="qrImage">
+                    <img src="" id="qrImage" class="img-fluid">
                 </div>
-
-                <button onclick="generateQR()" class="btn btn-danger">Generate your PetTag</button>
+    
+                <button onclick="generateQR()" class="btn btn-danger mt-3">Generate your PetTag</button>
             </div>
         </div>
-
+    
         <script>
-
-            let imgBox = document.getElementById("imgBox");
-            let qrImage = document.getElementById("qrImage");
-            let qrText = document.getElementById("qrText");
-
             function generateQR() {
-                if (qrText.value.length > 0) {
-                    qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + "" + qrText.value;
+                let petName = document.getElementById("petName").value;
+                let yourName = document.getElementById("yourName").value;
+                let contactNumber = document.getElementById("contactNumber").value;
+                
+                if (petName.length > 0 && yourName.length > 0 && contactNumber.length === 10 && /^\d+$/.test(contactNumber)) {
+                    let qrText = `Pet's Name: ${petName}\nYour Name: ${yourName}\nContact Number: ${contactNumber}`;
+
+                    let qrImage = document.getElementById("qrImage");
+                    let imgBox = document.getElementById("imgBox");
+
+                    qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(qrText)}`;
                     imgBox.classList.add("show-img");
                 } else {
-                    qrText.classList.add('error');
-                    setTimeout(() => {
-                        qrText.classList.remove('error');
-                    }, 1000);
+                    // Handle empty fields or invalid contact number
+                    alert("Please fill in all fields with valid data.");
                 }
             }
         </script>
