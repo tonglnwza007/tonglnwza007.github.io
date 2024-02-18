@@ -85,8 +85,8 @@
             <div class="text-center">
                 <h5 class="text-white">Enter your pet's name</h5>
                 <input type="text" placeholder="Name of your pet" id="petName" class="form-control">
-                <h5 class="text-white">Enter your name</h5>
-                <input type="text" placeholder="Your name" id="yourName" class="form-control">
+                <h5 class="text-white">Enter Owner name</h5>
+                <input type="text" placeholder="Owner name" id="ownerName" class="form-control">
                 <h5 class="text-white">Enter your contact number</h5>
                 <input type="text" placeholder="Contact number" id="contactNumber" class="form-control" maxlength="10">
     
@@ -101,11 +101,11 @@
         <script>
             function generateQR() {
                 let petName = document.getElementById("petName").value;
-                let yourName = document.getElementById("yourName").value;
+                let ownerName = document.getElementById("ownerName").value;
                 let contactNumber = document.getElementById("contactNumber").value;
                 
-                if (petName.length > 0 && yourName.length > 0 && contactNumber.length === 10 && /^\d+$/.test(contactNumber)) {
-                    let qrText = `Pet's Name: ${petName}\nYour Name: ${yourName}\nContact Number: ${contactNumber}`;
+                if (petName.length > 0 && ownerName.length > 0 && contactNumber.length === 10 && /^\d+$/.test(contactNumber)) {
+                    let qrText = `Pet's Name: ${petName}\nOwner Name: ${ownerName}\nContact Number: ${contactNumber}`;
 
                     let qrImage = document.getElementById("qrImage");
                     let imgBox = document.getElementById("imgBox");
