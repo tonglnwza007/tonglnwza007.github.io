@@ -2,26 +2,26 @@
 <html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>PetCare</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>PetCare</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/slicknav.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
@@ -80,6 +80,9 @@
                 <div class="header-right-btn f-right d-none d-lg-block ml-30">
                   <a id="btnLogin" href="login.html" class="header-btn h5 text-white">Login</a>
                 </div>
+                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                  <a id="btnProfile" href="profile.html" class="header-btn h5 text-white">Profile</a>
+                </div>
               </div>
             </div>
             <!-- Mobile Menu -->
@@ -101,8 +104,8 @@
           <div class="row align-items-center">
             <div class="col-xl-7 col-lg-8 col-md-10">
               <div class="hero__caption">
-                <h3 data-animation="fadeInUp" data-delay=".3s"><b>A Healthy Pet is a Happy Pet</h3></b>
-                <h1 data-animation="fadeInUp" data-delay=".3s"><b>We Care Your Pet</h1></b>
+                <h3 data-animation="fadeInUp" data-delay=".3s"><b>A Healthy Pet is a Happy Pet</b></h3>
+                <h1 data-animation="fadeInUp" data-delay=".3s"><b>We Care Your Pet</b></h1>
                 <a href="about.html" class="hero-btn" data-animation="fadeInLeft" data-delay=".3s">
                   learn
                   more<i class="ti-arrow-right"></i>
@@ -122,7 +125,7 @@
         <div class="row">
           <div class="col-lg-5 align-self-center mb-10">
             <div class="dogie">
-              <img src="assets\img\hero\dogie.png" alt="">
+              <img src="assets/img/hero/dogie.png" alt="">
             </div>
           </div>
           <div class="col-lg-7">
@@ -403,6 +406,7 @@
 
         { document.getElementById("btnSignin").style.display = "block"; }
         { document.getElementById("btnLogin").style.display = "block"; }
+        { document.getElementById("btnProfile").style.display = "none"; }
 
       } else {
         //User already logged in
@@ -415,6 +419,7 @@
 
         { document.getElementById("btnSignin").style.display = "none"; }
         { document.getElementById("btnLogin").style.display = "none"; }
+        { document.getElementById("btnProfile").style.display = "block"; }
 
       }
     }
