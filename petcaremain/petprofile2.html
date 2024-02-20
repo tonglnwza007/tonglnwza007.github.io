@@ -91,101 +91,94 @@
                             <div class="container p-3 my-3 bg-warning text-white">
                                 <h2 class="text-white mb-20 p-1">Add Pet Profile</h2>
                                 <form action="/action_page.php">
-
                                     <div class="form-group">
                                         <label for="text">Petname</label>
                                         <input type="text" class="form-control p-1" id="text"
                                             placeholder="Enter petname" name="petname" required="required"
                                             maxlength="100">
                                     </div>
-
                                     <div class="form-group">
                                         <label class="text-white mb-20 p-1">Species</label>
-                                        <div class="row">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <form>
+                                                        <input type="radio" name="species" value="dog">dog
+                                                    </form>
+                                                    <br>
+                                                </div>
                                             <div class="col-md-6">
-                                                <form>
-                                                    <input type="radio" name="species" value="dog">dog
+                                                    <input type="radio" name="species" value="cat">cat
+                                </form>
+                            </div>
+                        </div>
+
+                                    <div class="form-group">
+                                        <label for="text">Breed</label>
+                                        <input type="text" class="form-control p-1" id="text" placeholder="Enter breed" name="breed"
+                                            required="required" maxlength="100">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="text">Age</label>
+                                        <input type="text" class="form-control p-1" id="text" placeholder="Enter age" name="age"
+                                            required="required" maxlength="100">
+                                    </div>
+
+                                        <div class="form-group">
+                                            <label class="text-white mb-20 p-1">Gender</label>
+                                            <div class="row">
+                                                <div class="col-md-6">                                              
+                                                    <input type="radio" name="gender" value="male">boy                                                
+                                                    <br>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="radio" name="gender" value="female">girl
                                                 </form>
-                                                <br>
+                                                </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <input type="radio" name="species" value="cat">cat
-                                </form>
-                            </div>
-                            </form>
-                        </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="text">Weight</label>
+                                            <input type="text" class="form-control p-1" id="text" placeholder="Enter weight"
+                                                name="weight" required="required" maxlength="100">
+                                        </div>
 
-                        <div class="form-group">
-                            <label for="text">Breed</label>
-                            <input type="text" class="form-control p-1" id="text" placeholder="Enter breed" name="breed"
-                                required="required" maxlength="100">
-                        </div>
+                                        <div class="form-group">
+                                            <label for="text">Height</label>
+                                            <input type="text" class="form-control p-1" id="text" placeholder="Enter height"
+                                                name="height" required="required" maxlength="100">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="text">Color and Marking</label>
+                                            <input type="text" class="form-control p-1" id="text"
+                                                placeholder="Enter color and marking" name="colorandmarking" required="required"
+                                                maxlength="100">
+                                        </div>
 
-                        <div class="form-group">
-                            <label for="text">Age</label>
-                            <input type="text" class="form-control p-1" id="text" placeholder="Enter age" name="age"
-                                required="required" maxlength="100">
-                        </div>
+                                        <div class="form-group">
+                                            <label for="text">Personality (i.e. friendly/shy/playful) </label>
+                                            <input type="text" class="form-control p-1" id="text" placeholder="Enter personality"
+                                                name="personality" maxlength="100">
+                                        </div>
 
-                        <div class="form-group">
-                            <label class="text-white mb-20 p-1">Gender</label>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    
-                                        <input type="radio" name="gender" value="male">boy
-                                    
-                                    <br>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="radio" name="gender" value="female">girl
-                                </form>
-                                </div>
-                            </div>
-                            </div>
+                                        <div class="form-group">
+                                            <label for="text">Background (if relevant) </label>
+                                            <input type="text" class="form-control p-1" id="text" placeholder="Enter background"
+                                                name="background" maxlength="100">
+                                        </div>
 
-                            <div class="form-group">
-                                <label for="text">Weight</label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter weight"
-                                    name="weight" required="required" maxlength="100">
-                            </div>
+                                        <div class="form-group">
+                                            <label for="text">Preferences (i.e. fav toys/activities/food) </label>
+                                            <input type="text" class="form-control p-1" id="text" placeholder="Enter preferences"
+                                                name="preferences" maxlength="100">
+                                        </div>
 
-                            <div class="form-group">
-                                <label for="text">Height</label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter height"
-                                    name="height" required="required" maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Color and Marking</label>
-                                <input type="text" class="form-control p-1" id="text"
-                                    placeholder="Enter color and marking" name="colorandmarking" required="required"
-                                    maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Personality (i.e. friendly/shy/playful) </label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter personality"
-                                    name="personality" maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Background (if relevant) </label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter background"
-                                    name="background" maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Preferences (i.e. fav toys/activities/food) </label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter preferences"
-                                    name="preferences" maxlength="100">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="text">Habits</label>
-                                <input type="text" class="form-control p-1" id="text" placeholder="Enter habits"
-                                    name="habits" maxlength="100">
-                            </div>
-                            <button type="submit" class="btn btn-danger"><a href="index.html">Add</a></button>
+                                        <div class="form-group">
+                                            <label for="text">Habits</label>
+                                            <input type="text" class="form-control p-1" id="text" placeholder="Enter habits"
+                                                name="habits" maxlength="100">
+                                        </div>
+                                    <button type="submit" class="btn btn-danger"><a href="index.html">Add</a></button>
                             </form>
                         </div>
                     </div>
